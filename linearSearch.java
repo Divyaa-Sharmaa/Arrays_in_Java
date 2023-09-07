@@ -10,7 +10,13 @@ public class linearSearch{
         int numberToBeSearched = sc.nextInt();
         int[] arr = new int[size];
         inputArr(arr);
-        linearArr(arr, numberToBeSearched);
+        int index = linearArr(arr, numberToBeSearched);
+        if(index == -1){
+            System.out.println("Number not found...");
+        }
+        else{
+            System.out.println("number present at index: " + index); 
+        }
     }
 
     public static void inputArr(int[] arr){
@@ -19,15 +25,13 @@ public class linearSearch{
         }
     }
 
-    public static void linearArr(int[] arr, int n){
+    public static int linearArr(int[] arr, int n){
         for(int i=0;i<arr.length;i++){
             if(arr[i]==n){
-                System.out.println("number present at index: " + i);                
-            }
-            else{
-                System.out.println("number not found...");
+                return i;              
             }
         }
+        return -1;
     }
     
 }
