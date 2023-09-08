@@ -27,6 +27,7 @@ public class pairNum {
             }
             System.out.println();
         }
-    }
-    
+    }    
+
 }
+
